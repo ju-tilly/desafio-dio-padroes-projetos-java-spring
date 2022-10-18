@@ -2,6 +2,7 @@ package com.github.juceduarte.projetospring.model;
 
 import javax.persistence.*;
 
+
 @Entity
 public class Cliente {
     @Id

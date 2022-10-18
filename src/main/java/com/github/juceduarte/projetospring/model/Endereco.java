@@ -14,7 +14,8 @@ import javax.persistence.Id;
 
 @Entity  //anotação JPA para designar qual a função desse atributo
 public class Endereco {
-    @Id  //anotação JPA
+    //anotação JPA
+    @Id
     private String cep;
     private String logradouro;
     private String complemento;
@@ -26,7 +27,9 @@ public class Endereco {
     private String ddd;
     private String siafi;
 
-    public String getCep() { return cep; }
+    public String getCep() {
+        return cep;
+    }
 
     public void setCep(String cep) {
         this.cep = cep;
