@@ -36,7 +36,7 @@ public class Application {
 		return new OpenAPI().info(new Info()
 				.title("API de cadastro de clientes e CEP")
 				.version("1.0.1")
-				.description("Exemplo de um servidor para clientes buscarem endereços pelo CEP")
+				.description("API que cadastra clientes e busca endereço completo com apenas o CEP.")
 				.termsOfService("http://example.com/terms/")
 				.license(new License().name("Apache 2.0").url("https://www.apache.org/licenses/LICENSE-2.0.html")));
 	}
