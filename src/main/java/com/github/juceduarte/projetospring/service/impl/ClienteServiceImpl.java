@@ -1,5 +1,6 @@
 package com.github.juceduarte.projetospring.service.impl;
 
+import com.github.juceduarte.projetospring.exception.ClienteNotFoundException;
 import com.github.juceduarte.projetospring.model.Cliente;
 import com.github.juceduarte.projetospring.model.ClienteRepository;
 import com.github.juceduarte.projetospring.model.Endereco;
@@ -40,6 +41,9 @@ public class ClienteServiceImpl implements ClienteService {
     @Override
     public Cliente buscarPorId(Long id) { //Buscar cliente por ID
         Optional<Cliente> cliente = clienteRepository.findById(id);
+        if(!cliente.isPresent()){
+            throw new ClienteNotFoundException(id);
+        }
         return cliente.get();
     }
 
