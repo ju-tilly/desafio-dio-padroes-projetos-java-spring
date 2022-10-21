@@ -34,7 +34,6 @@ public class ClienteServiceImpl implements ClienteService {
 
     @Override
     public Iterable<Cliente> buscarTodos() { //Buscar todos os clientes
-
         return clienteRepository.findAll();
     }
 
@@ -50,7 +49,6 @@ public class ClienteServiceImpl implements ClienteService {
     @Override
     public void inserir(Cliente cliente) {
         salvarClienteECep(cliente);
-
     }
 
     @Override
@@ -69,6 +67,11 @@ public class ClienteServiceImpl implements ClienteService {
     public void deletar(Long id) { //Deletar Cliente por ID
         clienteRepository.deleteById(id);
     }
+
+    /*@Override
+    public void exit(Long id){
+        clienteRepository.
+    }*/
 
     private void salvarClienteECep(Cliente cliente) {
         //Verificar se o endereço do cliente já existe (pelo CEP)
