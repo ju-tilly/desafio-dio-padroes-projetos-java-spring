@@ -39,11 +39,12 @@ public class ClienteServiceImpl implements ClienteService {
 
     @Override
     public Cliente buscarPorId(Long id) { //Buscar cliente por ID
-        Optional<Cliente> cliente = clienteRepository.findById(id);
+        return clienteRepository.findById(id).orElseThrow(()-> new ClienteNotFoundException(id));
+        /*Optional<Cliente> cliente = clienteRepository.findById(id);
         if(!cliente.isPresent()){
             throw new ClienteNotFoundException(id);
         }
-        return cliente.get();
+        return cliente.get();*/
     }
 
     @Override
