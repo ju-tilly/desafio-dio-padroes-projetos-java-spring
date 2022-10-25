@@ -56,11 +56,4 @@ public class ClienteRestController {
         clienteService.deletar(id);
         return ResponseEntity.ok().build();
     }
-
-    /*@PostMapping("/{id}")
-    @Operation(summary = "Exit")
-    public ResponseEntity<Cliente> exit(@PathVariable Long id){
-        clienteService.exit(id);
-        return ResponseEntity.ok(clienteService.buscarPorId(id));
-    }*/
 }

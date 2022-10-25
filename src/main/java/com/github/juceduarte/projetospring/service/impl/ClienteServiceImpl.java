@@ -65,13 +65,9 @@ public class ClienteServiceImpl implements ClienteService {
 
     @Override
     public void deletar(Long id) { //Deletar Cliente por ID
+        buscarPorId(id);
         clienteRepository.deleteById(id);
     }
-
-    /*@Override
-    public void exit(Long id){
-        clienteRepository.
-    }*/
 
     private void salvarClienteECep(Cliente cliente) {
         //Verificar se o endereço do cliente já existe (pelo CEP)
