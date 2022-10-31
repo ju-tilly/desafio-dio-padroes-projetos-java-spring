@@ -13,7 +13,7 @@ import org.springframework.http.HttpStatus;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class ClienteRestControllerIT {
+class ClienteRestControllerIT extends AbstractContainerBase {
 
     @LocalServerPort
     private int randomPort;
