@@ -10,3 +10,4 @@ Aprendendo na prática POO, Java, deploy na nuvem de um conjunto de API's desenv
 - *GIT*
 - *GitHub*
 - *Servidor Nuvem: Heroku - Gratuito*
+- *Faça o teste da api através do link:* https://via-cep-jds.herokuapp.com/swagger-ui/index.html
