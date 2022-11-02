@@ -26,6 +26,8 @@ class ClienteRestControllerIT extends AbstractContainerBase {
     @Test
     void whenbuscarTodosThenCheckResult() {
         RestAssured.given()
+                .auth()
+                .basic("user", "dio")
                 .when()
                 .get("/clientes")
                 .then()
